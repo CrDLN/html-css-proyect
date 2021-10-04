@@ -1,0 +1,206 @@
+// Px Screen
+$mobile_breakpoint: 576px;
+$tablet_breakpoint: 768px;
+$tablet_landscape_breakpoint: 920px;
+$desktop_breakpoint: 1200px;
+
+// SCSS Mixins
+@mixin mobile {
+  @media only screen and (max-width: #{$mobile_breakpoint}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (max-width: #{$tablet_breakpoint}) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media only screen and (max-width: #{$tablet_landscape_breakpoint}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (max-width: #{$desktop_breakpoint}) {
+    @content;
+  }
+}
+
+
+
+html,body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+
+
+// css navegador superior , reservar para mover a otro archivo
+.nav{
+    display: flex;
+    width: 100%;
+  
+    background-color: black;
+    color: white;
+    
+    .nav__menu{
+        margin: 2% 25%;
+        width: 100%;
+        list-style-type: none;
+        display: flex;
+        justify-content: flex-start;
+        font-size: 14px;
+        font-weight: bold;
+        
+        @include tablet-portrait{
+          
+          flex-direction: column;
+          margin: 0 0;
+          .nav__menu__item{
+            margin: 20px auto;
+          }
+  
+          .nav__menu__image{
+            font-size: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+  
+        }
+        
+        .nav__menu__item{
+            padding-right: 3%;
+        }
+  
+        .nav__menu__image{
+            font-size: 20px;
+            margin-right: 5%;
+        }
+  
+        a {
+            text-decoration: none;
+            background-image: linear-gradient(currentColor, currentColor);
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px;
+            transition: background-size .3s;
+            color: white;
+        }
+        
+        a:hover, a:focus {
+            background-size: 100% 2px;
+        }
+  
+    }
+  }
+
+
+.main{
+    //Le obligo a coger el 100% de la pantalla
+    //height: 100vh;  //***duda--- al poner esto se va al medio de la pantalla
+    background-color: black;
+    color: white;
+   .main__section{
+     
+     padding: 2.5% 0 ;
+
+     // elementos de la primera seccion
+
+     .main__section__body{
+        margin: auto 25%;
+
+        @include tablet-portrait{
+            margin: auto 10%;
+
+          }
+
+        .main__section__body--titulo{
+                font-size: 80px;
+        }
+        .main__section__body--titulo-2{
+            font-size: 50px;
+          }
+        .main__section__body__form{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            &--form{
+                width: 45%;
+                margin: 10px 20px;
+                @include tablet-portrait{
+                    margin: auto 5%;
+                    width: 80%;
+                  }
+            }
+        } 
+    }
+   }
+}
+
+.box-form{
+    input,textarea{
+        width: 100%;
+        height: 40px;
+        padding: 100px auto;
+    }
+    input[type=submit]{
+        
+        margin: 20px auto;
+        width: 150px;
+        height: 60px;
+        background-color: red;
+        color: white;
+        text-decoration: none;
+        border: none;
+        font-weight: bold;
+        
+        //efectos cuando pasamos el cursor por encima de este boton
+        &:hover{
+            background-color: rgb(196, 4, 4);
+        }
+    }
+}
+
+
+// Estilos pie de página
+.section-footer{
+    display: flex;
+      background-color: black;
+      color: white;
+      .section-footer__footer{
+          
+          display: flex;
+          margin: 1rem 25%;
+          flex-wrap: wrap;
+          width: 100%;
+      
+          .section-footer__footer__info{
+              width: 49%;
+              margin: 0.5rem 0;
+              padding: 10px 0 ;
+  
+              @include tablet-portrait{
+                width: 100%;
+              
+              }
+  
+              &.footer__image{
+                  width: 100%;
+  
+                  img{
+                    width: 25px;
+                    height: 25px;
+                    margin: auto 5px;
+                  }
+              }
+  
+          }
+      }
+  
+  }

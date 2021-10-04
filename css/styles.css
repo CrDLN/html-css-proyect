@@ -1,0 +1,224 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.nav .nav__menu {
+  margin: 2% 25%;
+  width: 100%;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 920px) {
+  .nav .nav__menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 0;
+  }
+  .nav .nav__menu .nav__menu__item {
+    margin: 20px auto;
+  }
+  .nav .nav__menu .nav__menu__image {
+    font-size: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+}
+
+.nav .nav__menu .nav__menu__item {
+  padding-right: 3%;
+}
+
+.nav .nav__menu .nav__menu__image {
+  font-size: 20px;
+  margin-right: 5%;
+}
+
+.nav .nav__menu a {
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(currentColor), to(currentColor));
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  -webkit-transition: background-size .3s;
+  transition: background-size .3s;
+  color: white;
+}
+
+.nav .nav__menu a:hover, .nav .nav__menu a:focus {
+  background-size: 100% 2px;
+}
+
+.main .main__section {
+  padding: 2.5% 0;
+}
+
+.main .main__section .main__section__body {
+  margin: auto 25%;
+}
+
+@media only screen and (max-width: 920px) {
+  .main .main__section .main__section__body {
+    margin: auto 5%;
+  }
+}
+
+.main .main__section .main__section__body .main__section__body--titulo {
+  font-size: 6vw;
+}
+
+.main .main__section .main__section__body .main__section__body--titulo-2 {
+  font-size: 4vw;
+}
+
+.main .main__section .main__section__body .main__section__body__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .main__section .main__section__body .main__section__body-boton {
+  text-align: center;
+}
+
+.main .main__section .main__section__body .main__section__body__text-justify {
+  padding: 2 auto;
+  line-height: 2em;
+  text-align: justify;
+}
+
+.main .main__section.main__section-1 {
+  background-color: black;
+  color: white;
+}
+
+.main .main__section.main__section-2 {
+  width: 100%;
+}
+
+.main .main__section.main__section-3 {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.main .main__section.main__section-3 .main__section__body {
+  margin-right: 50%;
+}
+
+.main .main__section.main__section-4 {
+  width: 100%;
+  background-color: #383838;
+  color: white;
+}
+
+.main .main__section.main__section-4 .main__section__body {
+  margin-left: 50%;
+}
+
+.main .main__section.main__section-5 {
+  background-color: white;
+}
+
+.card {
+  width: 44%;
+  margin: 5% auto;
+  text-align: center;
+}
+
+.card .image {
+  border-radius: 1%;
+  width: 100%;
+}
+
+.card .card-text {
+  text-align: left;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 920px) {
+  .card {
+    width: 80%;
+  }
+}
+
+.boton {
+  display: inline-block;
+  padding: 15px 50px;
+  margin: 20px auto;
+  background-color: red;
+  text-decoration: none;
+  color: white;
+}
+
+.boton:hover {
+  background-color: #c40404;
+}
+
+.section-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+  color: white;
+}
+
+.section-footer .section-footer__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem 25%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.section-footer .section-footer__footer .section-footer__footer__info {
+  width: 49%;
+  margin: 0.5rem 0;
+  padding: 10px 0;
+}
+
+@media only screen and (max-width: 920px) {
+  .section-footer .section-footer__footer .section-footer__footer__info {
+    width: 100%;
+  }
+}
+
+.section-footer .section-footer__footer .section-footer__footer__info.footer__image {
+  width: 100%;
+}
+
+.section-footer .section-footer__footer .section-footer__footer__info.footer__image img {
+  width: 25px;
+  height: 25px;
+  margin: auto 5px;
+}
+/*# sourceMappingURL=styles.css.map */
